@@ -14,9 +14,14 @@ public class Data{
   public static void main(String[] args){
     Data D=new Data();
     Scanner S = new Scanner(System.in);
-    System.out.println("Enter Your RollNo: ");
+    System.out.print("Enter Your RollNo: ");
     String RollNo=S.next();
-    char a = RollNo.charAt(8);
-    System.out.println(a);
+    char A = RollNo.charAt(8);
+    int Value=A;
+    if(Value>=99 || Value<=106){
+      Value -=32;
+      A = (char)Value;
+    }
+    System.out.println(A);
   }
 }
